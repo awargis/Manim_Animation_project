@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b14">
+  <meta name="description" content="A Manim-powered visual learning project for physics and mathematics.">
+  <title>Manim Animation Project</title>
+  <style>
+    :root{color-scheme:dark;--bg:#070b14;--panel:#101827;--line:#26364c;--cyan:#63e6ff;--amber:#ffb454;--text:#f4f7fb;--muted:#a9b8cc}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#17324b 0,transparent 55%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+    main{width:min(920px,92vw);margin:0 auto;padding:9vh 0 5rem}.eyebrow{color:var(--cyan);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.8rem}.hero{padding:2rem 0 3rem;border-bottom:1px solid var(--line)}h1{font-size:clamp(2.6rem,7vw,5.5rem);line-height:1.02;letter-spacing:-.055em;margin:.8rem 0 1.3rem}h1 span{color:var(--cyan)}p{color:var(--muted);max-width:68ch}.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}.button{display:inline-block;padding:.8rem 1.1rem;border-radius:12px;border:1px solid var(--line);text-decoration:none;color:var(--text);font-weight:650}.primary{background:var(--cyan);color:#06111b;border-color:var(--cyan)}section{padding:2rem 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}.card{background:linear-gradient(145deg,#121d2e,#0c1320);border:1px solid var(--line);border-radius:18px;padding:1.2rem}.card h3{margin:.1rem 0 .5rem;color:var(--amber)}code{color:var(--cyan);overflow-wrap:anywhere}footer{border-top:1px solid var(--line);padding-top:1.2rem;color:var(--muted);font-size:.9rem}
+  </style>
+</head>
+<body><main>
+  <header class="hero">
+    <div class="eyebrow">Physics · Mathematics · Visual storytelling</div>
+    <h1>Make difficult ideas <span>visible.</span></h1>
+    <p>A starter project for cinematic, step-by-step educational animations using Manim Community Edition. Each episode begins with a question, builds a visual model, and gives learners a moment to predict what happens next.</p>
+    <div class="actions"><a class="button primary" href="https://github.com/awargis/Manim_Animation_project">Explore the GitHub repository ↗</a><a class="button" href="https://github.com/awargis/Manim_Animation_project/actions">Render a video in Actions ↗</a></div>
+  </header>
+  <section><div class="eyebrow">Getting started</div><h2>Your first render</h2><div class="grid">
+    <article class="card"><h3>01 · Set up</h3><p>Install Python 3.11, FFmpeg, and the dependencies listed in <code>requirements.txt</code>.</p></article>
+    <article class="card"><h3>02 · Customize</h3><p>Edit the question heading and statement in <code>main.py</code>. Verify the physics and solution before publishing.</p></article>
+    <article class="card"><h3>03 · Render</h3><p>Run <code>manim -pqh main.py IrodovQuestionDemo</code>, or use the repository's GitHub Actions workflow to create an MP4 artifact.</p></article>
+  </div></section>
+  <section><div class="eyebrow">Production note</div><h2>Designed to grow</h2><p>The included scene is an illustrative circular-motion visual—not a solution to a specific Irodov question. Replace the sample prompt with a question you have permission to reproduce, then check every equation, diagram, and conclusion for accuracy.</p></section>
+  <footer>Built with Manim Community Edition · Static project page hosted by GitHub Pages.</footer>
+</main></body></html>
