@@ -1,0 +1,40 @@
+name: Render Manim video
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'main.py'
+      - 'requirements.txt'
+      - '.github/workflows/render-manim.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcairo2-dev libpango1.0-dev ffmpeg
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+      - name: Render scene
+        run: manim -qh main.py IrodovQuestionDemo
+      - name: Upload rendered MP4
+        uses: actions/upload-artifact@v4
+        with:
+          name: manim-render
+          path: media/videos/main/1080p60/IrodovQuestionDemo.mp4
+          if-no-files-found: error
+          retention-days: 14
