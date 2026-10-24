@@ -1,0 +1,6 @@
+{
+  "name": "Irodov Manim Studio 9:16",
+  "description": "Convert Irodov physics problem screenshots into 9:16 vertical Manim animations for Google Colab with interactive physics previews and a universal AI master prompt.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
